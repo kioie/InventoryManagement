@@ -2,6 +2,7 @@ env: flex
 runtime: java
 runtime_config:
   jdk: openjdk8
+
 resources:
   cpu: 1
   memory_gb: 1
@@ -10,13 +11,7 @@ resources:
     - name: ramdisk1
       volume_type: tmpfs
       size_gb: 0.5
-# Automatic Scaling
-automatic_scaling:
-  min_num_instances: 1
-  max_num_instances: 2
-  cool_down_period_sec: 180
-  cpu_utilization:
-    target_utilization: 0.6
+
 
 handlers:
   - url: /.*
