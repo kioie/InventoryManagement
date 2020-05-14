@@ -1,5 +1,5 @@
 steps:
   - name: gcr.io/cloud-builders/mvn:3.5.0-jdk-8
     id: build
-    args: ["-DskipTests=true", "appengine:deploy"]
+    args: ["-DskipTests=true", "package","appengine:deploy"]
 timeout: "1600s"
