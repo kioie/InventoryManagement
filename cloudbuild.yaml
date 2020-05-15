@@ -3,6 +3,10 @@ steps:
   #    id: build
   #    args: ["-DskipTests=true", "package","appengine:deploy"]
   #timeout: "1600s"
-  - name: "gcr.io/cloud-builders/gcloud"
-    args: ["app", "deploy"]
-timeout: "1600s"
+  #  - name: "gcr.io/cloud-builders/gcloud"
+  #    args: ["app", "deploy"]
+  #timeout: "1600s"
+  - name: 'gcr.io/cloud-builders/mvn'
+    args: ['install']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['app', 'deploy']
