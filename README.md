@@ -49,7 +49,7 @@ Basic configs for spring hibernate are defined under the [`application.propertie
     spring.profiles.active=mysql
   
   
-Note:
+**Note**:
 *`spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl`* Hibernate maps field names using a physical strategy and an implicit strategy. We want to use physical naming strategy just so the values we use for annotations `@Table` and `@Column’s` name attribute we use in the [inventory](https://github.com/kioie/InventoryManagement/blob/master/src/main/java/com/gcp/springboot/inventorymanagement/model/Inventory.java) model file among other files would remain as it is.
 
 Linking it to GCP Cloud Sql as our MySql datasource we begin by adding this dependency
@@ -95,7 +95,8 @@ At this point, you should be able to run the app locally with a simple
 
     mvn spring-boot:run
 
-**Spring GCP App Engine**
+## **Spring GCP App Engine**
+
 Now lets take this app to the "cloud". Well start by adding the app engine plugin in your `pom.xml`
 
         <plugin>  
@@ -172,4 +173,3 @@ The final file would look like so:
       - name: gcr.io/cloud-builders/docker  
         args: ["build", "-t", "gcr.io/$PROJECT_ID/inventorymanagement", "--build-arg=JAR_FILE=target/inventorymanagement-1.0.0.0.jar", "."]  
     images: ["gcr.io/$PROJECT_ID/inventorymanagement"]
-
