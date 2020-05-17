@@ -112,7 +112,7 @@
                 <version>2.2.0</version>
                 <configuration>
                     <deploy.projectId>sample-gcp-project-276208</deploy.projectId>
-                    <deploy.version>4</deploy.version>
+                    <deploy.version>5</deploy.version>
                 </configuration>
             </plugin>
         </plugins>
