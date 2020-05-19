@@ -1,4 +1,4 @@
-# Spring GCP Starter + Spring Cloud: Inventory Management
+# Spring GCP: Inventory Management Rest Service 
 **About**  
   
 This is a demo app built on Spring, to test out a CI/CD deployment plan on Google Cloud Platform. This demo is designed with the goal of integrating GCP services to ease deployment on a GCP Cloud build pipeline.
@@ -140,7 +140,7 @@ At this point, you should be able to directly deploy with
 
 ## **GCP Cloud Build**
 
-Moving on to Cloud build, you will need the [cloudbuild.yaml](https://github.com/kioie/InventoryManagement/blob/master/cloudbuild.yaml) file on the project root. Your cloud build file is broken down into two steps, test step and package and deploy step.
+Moving on to Cloud build, you will need the [cloudbuild.yaml](https://github.com/kioie/InventoryManagement/blob/master/cloudbuild.yaml) file on the project root. Your cloud build process is broken down into two steps, test step and package and deploy step.
 
     steps:  
       - name: maven:3-jdk-8  
@@ -151,7 +151,7 @@ Moving on to Cloud build, you will need the [cloudbuild.yaml](https://github.com
         args: ["package", "-Dmaven.test.skip=true","appengine:deploy"]
 At this point, you should be able to push this spring app to a github repo and trigger a cloud build on GCP.
 
-Bonus
+##Bonus
 
 If you are interested, you can include a container build in your CI/CD pipeline. All you'll need to do is to setup a simple [Dockerfile](https://github.com/kioie/InventoryManagement/blob/master/Dockerfile)
 

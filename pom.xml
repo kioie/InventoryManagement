@@ -111,8 +111,8 @@
                 <artifactId>appengine-maven-plugin</artifactId>
                 <version>2.2.0</version>
                 <configuration>
-                    <deploy.projectId>sample-gcp-project-276208</deploy.projectId>
-                    <deploy.version>6</deploy.version>
+                    <deploy.projectId>sample-gcp-project-277704</deploy.projectId>
+                    <deploy.version>1</deploy.version>
                 </configuration>
             </plugin>
         </plugins>
