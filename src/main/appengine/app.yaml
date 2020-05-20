@@ -12,7 +12,6 @@ resources:
       volume_type: tmpfs
       size_gb: 0.5
 
-
 handlers:
   - url: /.*
     script: this field is required, but ignored
