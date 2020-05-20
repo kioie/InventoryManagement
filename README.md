@@ -8,9 +8,9 @@ The project integrates Spring boot, Hibernate, GCP Cloud Sql, GCP Secret Manager
 ## Overview
 This demo is built with Spring Cloud, Spring GCP and Maven. The app is a simple Inventory Manager API endpoint and should be accessible on 
 
-    curl http://{url}/inventory/1
-    curl http://{url}/inventory/2
-    curl http://{url}/inventory/
+    curl https://{url}/inventory/1
+    curl https://{url}/inventory/2
+    curl https://{url}/inventory/
 The app will bootstrap a database using Spring Hibernate and should access the data over the rest API endpoint.
 
 ## Bill of Materials
@@ -36,7 +36,7 @@ The app will bootstrap a database using Spring Hibernate and should access the d
 ## Services Breakdown
 **Spring Hibernate with GCP Cloud Sql DataSource**
 
-Lets start with defining the data source.
+Lets start with defining the data source and configs
 
 Basic configs for spring hibernate are defined under the [`application.properties`](https://github.com/kioie/InventoryManagement/blob/master/src/main/resources/application.properties) file. This file needs no further configuration.
 
@@ -68,7 +68,7 @@ And then add another config file for cloud sql: [application-mysql.propeties](ht
     #SQL DB USERNAME/PASSWORD  
     spring.datasource.username=root
     spring.datasource.password=xxxxx
-Now, since we are hosting this on a public repo, we'd need to take care of confidential configs (usernames, passwords, connection names etc).
+Now, since we are hosting on a public repo, we'd need to take care of confidential configs (usernames, passwords, connection names etc).
 
 So lets add [GCP Secret Manager](https://cloud.google.com/secret-manager) service for our credential manager.
 
