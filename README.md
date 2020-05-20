@@ -151,7 +151,7 @@ Moving on to Cloud build, you will need the [cloudbuild.yaml](https://github.com
         args: ["package", "-Dmaven.test.skip=true","appengine:deploy"]
 At this point, you should be able to push this spring app to a github repo and trigger a cloud build on GCP.
 
-##Bonus
+## Bonus
 
 If you are interested, you can include a container build in your CI/CD pipeline. All you'll need to do is to setup a simple [Dockerfile](https://github.com/kioie/InventoryManagement/blob/master/Dockerfile)
 
