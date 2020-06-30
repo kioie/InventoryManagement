@@ -35,6 +35,8 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <spring-cloud-gcp-version>1.2.3.RELEASE</spring-cloud-gcp-version>
+        <gcp-project-name>ci-cd-test-281521</gcp-project-name>
     </properties>
 
     <dependencyManagement>
@@ -42,7 +44,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-gcp-dependencies</artifactId>
-                <version>1.2.3.BUILD-SNAPSHOT</version>
+                <version>${spring-cloud-gcp-version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -96,7 +98,7 @@
                 <artifactId>appengine-maven-plugin</artifactId>
                 <version>2.2.0</version>
                 <configuration>
-                    <deploy.projectId>sample-gcp-project-277704</deploy.projectId>
+                    <deploy.projectId>${gcp-project-name}</deploy.projectId>
                     <deploy.version>1</deploy.version>
                 </configuration>
             </plugin>
